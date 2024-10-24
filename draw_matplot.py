@@ -7,10 +7,6 @@ import matplotlib.image as image
 
 from matplotlib import transforms
 
-# add udp functions
-# https://shengyu7697.github.io/python-udp-socket/
-
-
 #with cbook.get_sample_data('logo2.png') as file:
 #    im = image.imread(file)
 
