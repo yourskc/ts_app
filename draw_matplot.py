@@ -73,10 +73,13 @@ def update(val):
     fig.canvas.draw_idle()
     ax.imshow(im1)
     tr = transforms.Affine2D().rotate_deg(amp_slider.val * 10)
-    ax.imshow(im2, transform=tr + ax.transData)
+    tr2 = transforms.ScaledTranslation(3.5, 0, fig.dpi_scale_trans)
+    ax.imshow(im2, transform=tr + tr2 + ax.transData )
 
+ax.imshow(im1)
 tr = transforms.Affine2D().rotate_deg(amp_slider.val * 10)
-ax.imshow(im2, transform=tr + ax.transData)
+tr2 = transforms.ScaledTranslation(3.5,0,fig.dpi_scale_trans)
+ax.imshow(im2, transform=tr + tr2 + ax.transData)
 
 
 # register the update function with each slider
